@@ -1,0 +1,421 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* The orange color */
+/* background: rgb(240, 172, 47); */
+
+/* Screen header */
+.screen {
+  display: flex;
+  width: 55%;
+  height: 100px;
+  margin: 0 auto;
+  background: rgb(59, 59, 160);
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  border-radius: 0 0 50% 50%;
+}
+
+/* Seats container section */
+.container {
+  border-radius: 20px;
+  background-color: rgb(192, 190, 229);
+  width: 60%;
+  height: 600px;
+  margin: 150px auto 0;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  align-items: center;
+}
+
+/* Each seat */
+.seat {
+  width: 45px;
+  height: 45px;
+  font-weight: 500;
+  font-size: 27px;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid #222;
+  transition: all 200ms;
+}
+
+/* Each seat */
+.seatAnim {
+  animation: seatAnim 2s forwards ease;
+}
+
+/* Left row section */
+.rows-left {
+  position: absolute;
+  top: 250px;
+  left: 15%;
+}
+
+/* Right row section */
+.rows-right {
+  position: absolute;
+  top: 250px;
+  right: 15%;
+}
+
+/* Each row number */
+.row {
+  width: 45px;
+  height: 60px;
+  font-weight: 700;
+  font-size: 30px;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Changes section */
+.changes {
+  width: 180px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* Changes form */
+.changesForm {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* all labels */
+label {
+  margin-top: 10px;
+}
+
+/* input types text password */
+input[type='text'],
+input[type='password'] {
+  margin-top: 2px;
+  padding: 5px;
+}
+
+/* Div for btn make changes */
+.btn-changes {
+  text-align: center;
+}
+
+/* Btn Make Changes */
+.btn-makeChanges {
+  background: rgb(59, 59, 160);
+  color: #fff;
+  padding: 7px 20px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  display: inline-block;
+  opacity: 1;
+  transition: transform 500ms, opacity 500ms;
+}
+
+/* Btn Make Changes hover */
+.btn-makeChanges:hover {
+  transform: scale(0.95);
+  opacity: 0.9;
+}
+
+/* Div with btns inside form */
+.form-btns {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Form submit btn (Submit) */
+.btn-submitAdmin {
+  background: rgb(59, 59, 160);
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  display: inline-block;
+  opacity: 1;
+  transition: transform 300ms;
+}
+
+.btn-submitAdmin:hover,
+.btn-cancel:hover {
+  transform: scale(0.95);
+}
+
+/* Btn Cancel */
+.btn-cancel {
+  background: rgb(129, 125, 207);
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  display: inline-block;
+  opacity: 1;
+  transition: transform 300ms;
+}
+
+/* Admin section changes */
+.adminSection {
+  position: absolute;
+  top: 60px;
+  right: 60px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#adminUsername {
+  margin-bottom: 10px;
+}
+
+#adminLogOut {
+  margin-bottom: 40px;
+  background: rgb(129, 125, 207);
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  display: inline-block;
+  opacity: 1;
+  transition: transform 300ms;
+}
+
+.undo {
+  margin-top: 10px;
+}
+
+#adminMessage {
+  position: absolute;
+  top: 160px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 500;
+  color: rgb(238, 44, 44);
+}
+
+/* Section btn-holder for undo all and save btns */
+.btn-holder {
+  width: 250px;
+  margin: 20px auto 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* All btns with class btn */
+.btn {
+  background: rgb(59, 59, 160);
+  color: #fff;
+  padding: 7px 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  display: inline-block;
+  opacity: 1;
+  transition: transform 500ms, opacity 500ms;
+}
+
+/* All btns with class btn */
+.btn:hover {
+  transform: scale(0.95);
+  opacity: 0.9;
+}
+
+/* Output result section */
+.outputResults {
+  position: absolute;
+  top: 110px;
+  left: 10px;
+  padding: 10px 10px 10px 17px;
+  background-color: rgb(192, 190, 229);
+  border-radius: 10px;
+}
+
+/* All uls */
+ul {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.seat-price {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* All lis */
+li {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 5px 0 0 5px;
+}
+
+/* Total amount section */
+.total {
+  position: absolute;
+  top: 65px;
+  left: 10px;
+  padding: 10px 10px 10px 17px;
+  background-color: rgb(192, 190, 229);
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+/* Btn start */
+.btnStart {
+  position: absolute;
+  right: 46.5%;
+  animation: btnStart 2s forwards ease;
+}
+
+/* Btn start animation */
+@keyframes btnStart {
+  0% {
+    opacity: 0;
+    top: -100px;
+  }
+
+  100% {
+    opacity: 1;
+    top: 150px;
+  }
+}
+
+/* Each seat animation */
+@keyframes seatAnim {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1300px) {
+  .container {
+    width: 40%;
+  }
+
+  .screen {
+    width: 35%;
+    font-size: 25px;
+  }
+
+  .seat {
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
+  }
+
+  .rows-left {
+    left: 24%;
+  }
+
+  .rows-right {
+    right: 24%;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    margin: 150px 0 0 9%;
+    width: 55%;
+  }
+
+  .screen {
+    width: 50%;
+    margin: 0 0 0 11%;
+    font-size: 20px;
+  }
+
+  .rows-left {
+    left: 1%;
+  }
+
+  .row {
+    font-size: 20px;
+  }
+
+  .rows-right {
+    display: none;
+  }
+
+  .seat {
+    width: 20px;
+    height: 20px;
+    font-size: 15px;
+  }
+
+  .total {
+    top: 300px;
+    left: 65%;
+    font-size: 17px;
+    /* width: 170px; */
+  }
+
+  .outputResults {
+    top: 350px;
+    left: 65%;
+  }
+
+  ul {
+    font-size: 17px;
+  }
+
+  .seat-price {
+    font-size: 17px;
+  }
+
+  /* All lis */
+  li {
+    font-size: 15px;
+  }
+
+  .btnStart {
+    left: 30%;
+  }
+}
+
+@media (max-width: 600px) {
+  .rows-left {
+    left: 0;
+  }
+
+  .btn {
+    font-size: 0.8rem;
+  }
+
+  #adminLogOut {
+    font-size: 0.7rem;
+  }
+
+  .changes {
+    top: 20px;
+  }
+}
